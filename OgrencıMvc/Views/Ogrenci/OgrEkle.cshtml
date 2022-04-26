@@ -1,0 +1,85 @@
+﻿@model OgrencıMvc.Models.EntityFramwork.TBLOGRENCILER
+@{
+    ViewBag.Title = "OgrEkle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div>
+    <form method="post" class="form-group">
+        <div>
+            <label>Öğrenci Adı</label>
+            <input type="text" class="form-control" name="OGRAD" />
+        </div>
+        <div style="margin-top:10px">
+            <label>Öğrenci Soyadı</label>
+            <input type="text" class="form-control" name="OGRSOYAD" />
+        </div>
+        <div style="margin-top:10px">
+            <label>Öğrenci Fotoğraf</label>
+            <input type="text" class="form-control" name="OGRFOTOGRAF" />
+        </div>
+        <div style="margin-top:10px">
+            <label>Öğrenci Cinsiyet</label>
+            <input type="text" class="form-control" name="OGRCINSIYET" />
+        </div>
+        <div style="margin-top:10px">
+            <label>Öğrenci Kulüp</label>
+            @Html.DropDownListFor(m => m.TBLKULUPLER.KULUPID, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+        </div>
+        
+
+        <div style="margin-top:10px">
+            <button class="btn btn-primary">Öğrenci Ekle</button>
+        </div>
+    </form>
+</div>
+@*<div style="margin-top:10px">
+        <label>şehri seçimi</label>
+        @Html.DropDownList("şehirler",
+       new[]
+       {
+           new SelectListItem(){Value="1",Text="ANKARA"},
+            new SelectListItem(){Value="2",Text="BURSA"},
+             new SelectListItem(){Value="3",Text="İSTANBUL"},
+              new SelectListItem(){Value="4",Text="İZMİR"}
+       },"ŞEHİR SEÇİNİZ....", new {@class="form-control"})
+
+    </div>*@
+@*<div style="margin-top:10px">
+
+            <label>film seçin</label>
+            <select id="MovieType" name="MovieType">
+
+                <option value=""></option>
+
+                <option value="0">Action</option>
+
+                <option value="1">Drama</option>
+
+                <option value="2">Comedy</option>
+
+                <option value="3">Science Fiction</option>
+
+                <option value="3">Animation</option>
+
+            </select>
+
+
+
+
+    </div>
+    <div style="margin-top:10px">
+        @using (Html.BeginForm("CategoryChosen", "Home", FormMethod.Get))
+        {
+
+         @Html.DropDownList("MovieType")
+
+         }
+
+        </div>*@
+@*<div style="margin-top:10px">
+        @Html.DropDownList("MovieType", null,"DERS SEÇİN", new {@class="form-control"})
+    </div>*@
+

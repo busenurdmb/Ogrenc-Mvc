@@ -1,0 +1,19 @@
+﻿@model OgrencıMvc.Models.EntityFramwork.TBLKULUPLER
+@{
+    ViewBag.Title = "KulüpGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Kulüp Getir sayfası</h2>
+
+@using (Html.BeginForm("güncelle", "kulupler", FormMethod.Post))
+            {
+        <div class="form-group">
+            @Html.LabelFor(m=>m.KULUPAD)
+            @Html.TextBoxFor(m=>m.KULUPAD,new{@class="form-control" })
+        </div>
+        @Html.HiddenFor(m=>m.KULUPID)
+    <div style="margin-top:15px">
+        <button class="btn btn-info">güncelle</button>
+    </div>
+            }
